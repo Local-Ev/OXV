@@ -1,0 +1,86 @@
+Chapter 1: Conceptualizing OXV
+Concept Name: OXV or Optimal/Open ExLight Vector  
+
+Goals: 
+-Be Lightweight 
+-And Fast 
+
+Commands: 
+L - Line 
+R - Round Line (Beizer Curves)
+C - Connect to Starting or Ending Point of an Line 
+G - Making Gradients
+GL - Grouping Lines [also used for fill] 
+BG - Sets the Background 
+I - Importing DLLs 
+
+Note: As you can see no commands reaches more then 2 characters long thats how simple it is[not an rule btw] and also an RISC-like shit 
+
+Syntax: 
+How things are represented: 
+<ALWAYS REQUIRED> [ONLY IF INFORMATION AVAILABLE ELSEWHERE] (Optional)
+
+L<LineID> <X1> <Y1> <X2> <Y2> [HEX] [THICK] [CAP] 
+Example: L7 0 0 255 255 000000 5 R 
+Explanatory: This tells that it should be an diaganol line that is the color black and the thickness of 5px, with the LineCap being Round
+
+R<LineID> <AX1> <AY1> <CX1> <CY1> <CX2> <CY2> <AX2> <AY2> [HEX] [THICK] [CAP]
+Example: R14 244 126 78 25 123 43 34 324
+Explanatory: Significantly More complicated then L, but essentially just more cordinents, Beizer Curves btw
+
+C<LineID><S/E> 
+Example: C6E 
+Explanatory: This Replaces the need of having duplicate cordinates and making it more simple for the human user instead of finding the cordinate copy & paste or re-writing  and it says the end point of Line 6 is where to connect, S is Start point E is End point 
+
+G <HEX1> <HEX2> and so on.. 
+Example: G FF0000 0000FF
+Explanatory: its an Gradient that replaces Fill parameter on some, and indented into it are Lines too make the Mesh
+
+GL [HEX] [THICK] [CAP] [FILL] 
+Example: GL 00FF00 12 R FF00FF 
+Explanatory: This says that all lines indented into it will be Green & Thickness of 12 and colored in with Purple too reduce the size even more
+
+I<DLLname/Directory> 
+Example: I Obj 
+Explanatory: imports an DLL named Obj that allows shapes too be added without typing many cordinance 
+
+BG <LENGTH> <WIDTH> <FILL> 
+Example: BG 1920 1080 FFFFFF 
+Explanatory: 1080p size with the background being white 
+
+Note: This is very simple and direct 
+
+Extra: 
+-Z-layering is just by where they appear first in the code, the first is at the back, the last is at the front
+
+Example of Code: 
+
+1. DLL way: 
+BG 255 255 FFFFFF 
+I Obj 
+
+#DLL command 
+Rec 0 0 255 255 10 000000 0000FF
+
+2. Raw way: 
+BG 255 255 FFFFFF 
+
+GL 000000 10 0000FF R
+	L1 0 0 255 0 
+	L2 C1E 255 255 
+	L3 C2E 0 255 
+	L4 C1S C3E
+
+Tools To Be Created:
+1. OXV Engine
+-This will actually Parse, and Structures it, for the GPU API lets say OpenGL, to understand and render
+2. DLL Tool
+-This is an Tool used too create DLL, via OXV code
+3. IDE
+-This is too make it more simpler to write OXV code, with Syntax Colors, Error Detection during writing stuff like that
+4. OXV GUI Editor
+-For Newbies too make OXV files, without having too understand any OXV code
+5. Viwer
+-Its not an Image if you cant see it
+Notes:
+The IDE could actually just be an Text Editor with highlights, an OXV Engine, DLL Tool, & an Viewer, integrated into it as Modules except for the OXV GUI Editor, as its more for Newbies, and its basically another IDE just different
