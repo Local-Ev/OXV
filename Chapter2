@@ -1,5 +1,28 @@
-Chapter 2: Programing an OXV Engine
-Date Start: 2025 June 28
-Date End: N/A hasn't ended yet 
+Chapter 2: Programing actual Software
 
-This will just be me Talking about it in here btw on what im doing
+i guess i have to Program now?
+
+So i wanna add Variables or Arrays, this will be similar to Bash but here is an example if you dont know
+Variable=10
+Array=(
+  "238"
+  "458"
+  "27"
+)
+Now this will be different in MY Language so it would be:
+Variable 10
+Array
+  258
+  458
+  27
+Reason is because well its gonna be needed in the DLL Tool, and it could be used to replace an Number
+This is so that it matches the theme going on, and elimanating useless characters
+Now you might be asking, how does the OXV Engine when used in an .oxv file know that its an variable? Simple when it dosent match ANY Command, but has an Number infront of it, or Numbers indented into it
+Also im gonna make another command
+
+CA <ArrayName> <NumberInList>
+Example: CA Array 3
+EXplanatory: This calls upon an number, in that Array, on the third Number in the List, which is 27
+
+Now how would the Variable be used? well simple just replace an number with the name of an Variable
+Technically this should be part of Chapter1 but who cares -_- i have to program now
