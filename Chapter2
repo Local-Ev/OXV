@@ -31,3 +31,9 @@ Technically this should be part of Chapter1 but who cares -_- i have to program
 
 Development, Date Started: July 3 2025 yes im still procrastinating an bit
 Also im learning while Developing so this should speed up process :D
+
+Update: I added Joints to both R & L
+L<LineID> <X1> <Y1> <X2> <Y2> [HEX] [THICK] [CAP] [JOINT]
+R<LineID> <AX1> <AY1> <CX1> <CY1> <CX2> <CY2> <AX2> <AY2> [HEX] [THICK] [CAP] [JOINT]
+GL [HEX] [THICK] [CAP] [JOINT][(FILL)]
+Also i made Fill Optional-ish
