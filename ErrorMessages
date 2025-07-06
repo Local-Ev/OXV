@@ -1,0 +1,13 @@
+Error Messages, C+ Prefix is to denote that it is from the OXV Graphical Code, and not any Library, or other stuff
+C+00 - Unknown Error: head too (no Website Forums yet) for Information, And we might Fix it for you, or make an Error Code for It
+C+01 - Data Missing: Expected (VALUE) at Line (LINE NUM)
+C+02 - Invalid Data: Expected 10-Integer/16-Integer/LineID/(many more) got (something)
+C+03 - BG Header Missing
+C+04 - (name of DLL) DLL not Found
+C+05 - Array Index Out of Bounds: No value at Index (VALUE) in Array (ARAY NAME)
+C+06 - Limit Exceeded: (VALUE) exceeds (LIMIT) at Line (LINE NUM)
+C+07 - Variable/Array not Found
+C+08 - File Creation Error
+C+09 - File Read Error
+C+0A - File Not Available
+C+0B - File is not an OXV File, if the contents of such File, is OXV Graphical Code please change the File Extension
